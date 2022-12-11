@@ -1,6 +1,6 @@
 <!-- Este index.php es el doc principal o bienvenida que se va a mostrar una vez Inscripto o Logueado.
-Se generó un <?php ?> inicial con su header, body y footer, y se dividió en dos.
-  Todo el contenido del header se coloco en cabecera.php dentro de templates
+Se generó un ?php ? inicial con su header, body y footer, y se dividió en dos.
+Todo el contenido del header se coloco en cabecera.php dentro de templates
 y todo el footer se coloco en pie.php dentro de templates  -->
 
 <!-- este archivo se divide en 3 parte para que no haya que hacer un header y un footer

@@ -1,5 +1,4 @@
 <?php
-
   #INSERT INTO `alumnos` (`id`, `nombre`, `apellido`) VALUES (NULL, 'Ani', 'Cae');
   include_once '../configuraciones/db.php';
   $conexionDB=DB::crearInstancia();
@@ -12,7 +11,7 @@
   $cursos=isset($_POST['cursos'])?$_POST['cursos']:''; #validacion de cursos
   $accion=isset($_POST['accion'])?$_POST['accion']:''; #validacion de accion
 
-  print_r($_POST);
+  //print_r($_POST);
 
   if ($accion != "") { #si se hizo una accion y es diferente de vacia entonces se valida un switch
     switch ($accion) {
@@ -55,7 +54,7 @@
         $consulta->execute();
         $cursosAlumno=$consulta->fetchAll(PDO::FETCH_ASSOC);
 
-        print_r($cursosAlumno);
+        //print_r($cursosAlumno);
 
         foreach($cursosAlumno as $curso) {
           $arregloCursos[]=$curso['id'];

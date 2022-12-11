@@ -1,8 +1,8 @@
 <!-- en estre archivo se van a mostrar los alumnos o nuevos usuarios ingresados, 
 y va a estar ligado o unido al archivo alumnos.php que es el que recibe
- los alumnos ingresados y los manda a la BD.php-->
+los alumnos ingresados y los manda a la BD.php-->
 
- <?php include('../templates/cabecera.php');?> <!-- con esta linea se linkea a cabecera.php -->
+<?php include('../templates/cabecera.php');?> <!-- con esta linea se linkea a cabecera.php -->
 <?php include('../secciones/alumnos.php');?> <!-- con esta linea se linkea a vista_alumnos.php -->
 
   <div class="row">

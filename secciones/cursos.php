@@ -9,7 +9,7 @@
   $nombre_curso=isset($_POST['nombre_curso'])?$_POST['nombre_curso']:'';
   $accion=isset($_POST['accion'])?$_POST['accion']:''; #validacion
 
-  print_r($_POST);
+  //print_r($_POST);
 
   if ($accion!=''){ #si $accion no esta vacio....se crea la verificacion switch para saber que boton preciona el usuario
     switch($accion){ #switch que evalua lo que presiona el usuario, por eso se crea un case para cada accion
@@ -46,7 +46,7 @@
         $consulta->execute();
         $curso=$consulta->fetch(PDO::FETCH_ASSOC);
         $nombre_curso=$curso['nombre_curso'];
-        print_r($curso);
+        //print_r($curso);
       break;
 
     }
