@@ -19,18 +19,21 @@
   }
   //agregado de la imagen del certificado
   function agregarImagen($pdf,$imagen,$x,$y) {
-    $pdf->Image($imagen,$x,$y,0);
+    $pdf->Image($imagen,$x,$y,254,194); //imagen, posicion, tamano
   }
 
     //creacion del certificado en PDF
-  $pdf = new FPDF("L","mm",array(254,194));
+  $pdf = new FPDF("L","mm",array(254,194)); //posicion left, tamano 254, 194 en mm
   $pdf->AddPage();
-  $pdf->SetFont("Arial","B",16);
-  agregarImagen($pdf,"../src/cert-log1.jpg",0,0);
-  agregarTexto($pdf,"Anibal",60,70,"L","Helvetica",30,0,84,115);
-  agregarTexto($pdf,'Sitio Web con PHP',-250,115,'L','Helvetica',20,0,84,115);
-  agregarTexto($pdf,'10/12/2022',-350,155,'L','Helvetica',11,0,84,115);
+  $pdf->SetFont("Arial","B",20);
+  agregarImagen($pdf,"../src/cert-log1a.jpg",0,0); 
+  agregarTexto($pdf,'Anibal Caeiro',-235,72,"C","Helvetica",30,0,84,115);
+  agregarTexto($pdf,'Curso de Python',-235,112,'C','Helvetica',20,0,84,115);
+  agregarTexto($pdf,date('d/m/Y'),-365,142,'C','Helvetica',15,0,84,115);
   $pdf->Output();
+
+  //ucwords(utf8_decode($alumno['nombre']." ".$alumno['apellido']))
+  //$alumno['nombre_curso']
 
   // se crea una consulta (la misma que en vista_alumnos) para recuperar los datos y ponerlos dentro del certificado
   include_once '../configuraciones/db.php';
@@ -62,6 +65,7 @@
   $alumno=$consulta->fetch(PDO::FETCH_ASSOC);
   //print_r($alumno);
 
+  
   //creacion del certificado en PDF
   //$pdf = new FPDF("L","mm",array(254,194));
   //$pdf->AddPage();
